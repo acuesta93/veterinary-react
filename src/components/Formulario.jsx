@@ -41,7 +41,32 @@ function Formulario({ pacientes, setPacientes }) {
             id : generarId()
         }
 
-        setPacientes(... pacientes, objetoPaciente)
+        /**
+         * setPacientes(...pacientes, objetoPaciente);
+         * Esto funciona solo con objetos, pacientes es una lista,
+         * lo que estás haciendo con esto es añadir la propiedad
+         * objetoPaciente al objeto lista, no a los items de la lista
+         * 
+         * El resultado vendría a ser algo como:
+         * pacientes.prototype = {
+         *  map: Function
+         *  items: Array<Paciente>
+         *  objetoPaciente: Paciente
+         *  filter: Function
+         *  ...
+         * }
+         * 
+         * No se si lo he explicado bien, en lugar de añadir 
+         * el nuevo paciente a la lista, has añadido una nueva propiedad
+         * al objeto lista (en js todo son objetos).
+         */
+
+        /**
+         * Lo que quieres hacer es esto, solo te faltaban los [ ]
+         * otra opción es setPacientes(pacientes.concat(objetoPaciente));
+         * hacen exactamente lo mismo, así que ha gusto del consumidor
+         */
+        setPacientes([... pacientes, objetoPaciente])
 
         //Reiniciar el form
         setNombre('')
