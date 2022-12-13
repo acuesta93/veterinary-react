@@ -22,7 +22,7 @@ function Paciente({paciente, setPaciente, eliminarPaciente}) {
             </p>
             <p className='font-bold mb-3 text-gray-700 uppercase'>
                 Email: {' '}
-                <span className='font-normal normal-case'>{email}</span>
+                <span className='font-normal normal-case break-words'>{email}</span>
             </p>
             <p className='font-bold mb-3 text-gray-700 uppercase'>
                 Fecha Alta: {' '}
@@ -30,10 +30,10 @@ function Paciente({paciente, setPaciente, eliminarPaciente}) {
             </p>
             <p className='font-bold mb-3 text-gray-700 uppercase'>
                 Síntomas: {' '}
-                <span className='font-normal normal-case'>{sintomas}</span>
+                <span className='font-normal normal-case break-words'>{sintomas}</span>
             </p>
 
-            <div className='flex justify-between mt-10'>
+            <div className='grid justify-items-center mt-10 gap-10 align-middle mr-auto ml-auto grid-cols-2'>
                 <button 
                 type='button'
                 className='py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-lg'

@@ -123,7 +123,7 @@ function Formulario({ pacientes, setPacientes, paciente, setPaciente}) {
                     id='email'
                     type="email"
                     placeholder="Email contacto"
-                    className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md'
+                    className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md break-words'
                     value={email}
                     onChange = { (e) => setEmail(e.target.value)}
                 />
@@ -149,7 +149,7 @@ function Formulario({ pacientes, setPacientes, paciente, setPaciente}) {
                 <textarea
                     id='sintomas'
                     placeholder='Describe los síntomas'
-                    className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md'
+                    className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md break-words'
                     value={sintomas}
                     onChange = { (e) => setSintomas(e.target.value)}
                 />
@@ -157,7 +157,7 @@ function Formulario({ pacientes, setPacientes, paciente, setPaciente}) {
 
             <input 
                 type="submit"
-                className='bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-all'
+                className='bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-all rounded-lg'
                 value= { paciente.id ? 'Editar Paciente' : 'Agregar Paciente'}
             />
 
